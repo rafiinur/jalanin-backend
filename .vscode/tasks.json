@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run FastAPI Server",
+			"type": "shell",
+			"command": "D:/Codes/Python/jalanin-backend/venv/Scripts/python.exe",
+			"args": ["-m", "uvicorn", "src.main:app", "--reload"],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

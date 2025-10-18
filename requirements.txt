@@ -8,3 +8,5 @@ python-dotenv
 joblib
 scikit-learn
 pandas
+supabase
+email-validator
