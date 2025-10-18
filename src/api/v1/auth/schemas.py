@@ -1,4 +1,4 @@
-from pydantic import BaseModel, EmailStr, Field, field_validator
+from pydantic import BaseModel, EmailStr, Field
 from enum import Enum
 from typing import Optional
 
@@ -13,15 +13,6 @@ class UserBase(BaseModel):
     role: Role
     avatar_url: Optional[str] = None
     created_at: Optional[str] = None
-
-class LoginRequest(BaseModel):
-    # Pydantic akan otomatis memvalidasi format email
-    email: EmailStr 
-    password: str = Field(
-        ..., 
-        min_length=8, 
-        description="Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character."
-    )
 
 class RegisterRequest(BaseModel):
     email: EmailStr 
